@@ -1,13 +1,13 @@
 [project]
 name = "devset"
-version = "0.1.0"
+version = "0.2.0"
 description = "A Swiss-army-knife CLI with the everyday tools every dev reaches for."
 readme = "README.md"
 license = "MIT"
 authors = [
     { name = "Samarth Chugh (Sam3360)", email = "iforgot3360@gmail.com" },
 ]
-requires-python = ">=3.8"
+requires-python = ">=3.11"
 keywords = ["cli", "devtools", "utilities", "developer-tools"]
 classifiers = [
     "Environment :: Console",
@@ -51,8 +51,24 @@ data = [
     "jupyter>=1.0.0",
     "openpyxl>=3.1.0",
 ]
+sam3360 = [
+    "replico>=0.2.3",        # brings secretshield + whyfail transitively
+    "VibeUI>=3.0.0",
+    "pyproject-lens>=0.4.3",
+]
+
+sam = [
+    "replico>=0.2.3",
+    "VibeUI>=3.0.0",
+    "pyproject-lens>=0.4.3",
+]
+
 all = [
     "devset[dev,web,data]",
+]
+
+samall = [
+    "devset[dev,web,data, sam3360]",
 ]
 
 [project.scripts]
